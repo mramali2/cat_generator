@@ -1,5 +1,5 @@
 import {useState} from "react"
-const CatForm = ({availableTags, setUrl, setTag}) => {
+const CatForm = ({availableTags, setTag}) => {
 
 
 
@@ -14,7 +14,6 @@ const CatForm = ({availableTags, setUrl, setTag}) => {
         event.preventDefault();
         const tag = event.target["catTag"].value
         setTag(tag)
-        // setUrl(`https://cataas.com/cat/${tag}`);
         event.target.reset();
         
     }

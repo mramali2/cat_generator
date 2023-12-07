@@ -24,27 +24,11 @@ const CatContainer = () => {
         setTag(updatedTag)
 
     }, [tag]);
-
-    // useEffect(() => {
-    //     const loadCatImage = async () => {
-
-
-
-    //         const response = await fetch(`https://cataas.com/cat/${tag}`);
-    //         const data = await response.json();
-    //         console.log("Response:", data);
-    //         // setUrl(data)
-            
-    //     }
-    //     loadCatImage();
-
-    // }, [tag])
-
   
     return ( <>
         <h1>PurrFectAdoptions</h1>
         {tag ? <CatGenerator tag={tag}/>: <CatGenerator tag="cute"/>}
-        <CatForm availableTags={catTags} setUrl={setUrl} setTag={setTag}/>
+        <CatForm availableTags={catTags} setTag={setTag}/>
     
         
         </>
