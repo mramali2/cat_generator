@@ -2,10 +2,8 @@ const CatGenerator = ({tag}) => {
 
     return ( 
         <>
-        <h2>Loading cat...</h2>
-
-        <img src={tag} alt="A cat"/>
-        <p>{tag}</p>
+        <img src={`https://cataas.com/cat/${tag}/says/Adopt%20Me?fontSize=50&fontColor=yellow`} alt="A cat"/>
+        <p>{`This ${tag} cat loves ${tag} walks and ${tag} treats!`}</p>
         </>
      );
 }

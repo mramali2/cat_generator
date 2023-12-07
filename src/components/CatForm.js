@@ -22,17 +22,17 @@ const CatForm = ({availableTags, setUrl, setTag}) => {
 
     return ( 
         <form id="cat-form" onSubmit={handleFormSubmit}>
-            <h3>Select type of cat</h3>
-            <label htmlFor="catTag">Choose Tag:</label>
+            <h3>Find your furry feline friend!</h3>
+            <label htmlFor="catTag">Choose your favourite cat:</label>
             <select 
                 id="catTag"
                 defaultValue="select-tag"
             >
-                <option disabled value="select-tag">Choose a tag</option>
+                <option disabled value="select-tag">Select an option</option>
                 {tagOptions}
             </select>
 
-            <input type="submit" value="Submit cat to adopt" />
+            <input type="submit" value="Adopt now!" />
 
         
         </form>
