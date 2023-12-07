@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
+
+h1 {
+    font-size: 50px;
+    text-decoration: solid;
+}
+
+h3{
+    font-size: 30px;
+}
+
+p{
+    font-size: 25px;
+}
+
+
+body {
+    background-color: #4f8bb0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Annie Use Your Telescope', cursive;
+    text-align: center;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
