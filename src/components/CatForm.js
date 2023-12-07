@@ -5,9 +5,19 @@ const CatForm = ({catTag}) => {
     )
     console.log(tagOptions);
 
-    return ( <>
-        <h2>Click here for your cat!</h2>
-        </>
+    return ( 
+        <form id="cat-form" >
+            <h3>Select type of cat</h3>
+            <label htmlFor="catTag">Choose Tag:</label>
+            <select 
+                id="catTag"
+                name="tag"
+                defaultValue="select-tag"
+            >
+                <option disabled value="select-tag">Choose a tag</option>
+                {tagOptions}
+            </select>
+        </form>
      );
 }
  
