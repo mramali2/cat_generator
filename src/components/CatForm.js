@@ -11,4 +11,4 @@ const CatForm = ({catTag}) => {
      );
 }
  
-export default CatForm;
+export default CatForm
