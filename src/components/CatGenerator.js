@@ -4,7 +4,7 @@ const CatGenerator = ({tag}) => {
         <>
         <h2>Loading cat...</h2>
 
-        <img src="https://cataas.com/cat/cute" alt="A cat"/>
+        <img src={tag} alt="A cat"/>
         <p>{tag}</p>
         </>
      );

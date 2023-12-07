@@ -3,26 +3,47 @@ import CatGenerator from "../components/CatGenerator";
 import CatForm from "../components/CatForm";
 const CatContainer = () => {
 
-    const [catTag, setCatTag] = useState([]);
+    const [catTags, setCatTags] = useState([]);
+    const [url, setUrl] = useState("https://cataas.com/cat");
 
-    const loadingCatPic = async () => {
-        const response = await fetch("https://cataas.com/api/tags");
-        const data = await response.json();
-        setCatTag(data);
-    }
+    const [tag, setTag] = useState("");
+
 
     useEffect( () => {
-        loadingCatPic();
+        const loadingCatTags = async () => {
+            const response = await fetch("https://cataas.com/api/tags");
+            const data = await response.json();
+            setCatTags(data);
+        }
+
+        loadingCatTags();
     }, []);
 
+    useEffect(() => {
+        const loadCatImage = async () => {
 
+
+            if (tag){
+
+            const response = await fetch(`https://cataas.com/cat/${tag}`);
+            const data = await response.json();
+            console.log("Response:", data);
+            // setUrl(data)
+            
+            }
+        }
+        loadCatImage();
+
+    }, [tag])
+
+  
     return ( <>
         <h1>Cat Adoption Website</h1>
-        <CatGenerator tag="cute"/>
-        <CatForm catTag={catTag}/>
-
+        {tag ? <CatGenerator tag={url}/>: <CatGenerator tag="https://cataas.com/cat"/>}
+        <CatForm availableTags={catTags} setUrl={setUrl} setTag={setTag}/>
+        console.log(url);
+        
         </>
-   
 
      );
 }
