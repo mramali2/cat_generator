@@ -15,7 +15,7 @@ p{
 
 
 body {
-    background-color: #4f8bb0;
+    background-color: #a1c0d5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,3 +27,9 @@ img {
     width: 500px;
     height: auto;
 }
+
+#cat-form label {
+    font-weight: bold;
+    font-size: 20px;
+}
+

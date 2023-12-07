@@ -26,7 +26,7 @@ const CatContainer = () => {
     }, [tag]);
   
     return ( <>
-        <h1>PurrFectAdoptions</h1>
+        <h1>PurrFectAdoptions 🐾</h1>
         {tag ? <CatGenerator tag={tag}/>: <CatGenerator tag="cute"/>}
         <CatForm availableTags={catTags} setTag={setTag}/>
     
